@@ -36,6 +36,17 @@ class Name
             };
         }
         switch (str_replace('_', '', $name)) {
+                
+           case 'latitude':
+                return function () use ($generator) {
+                    return $generator->latitude;
+                };
+            case 'longitude':
+                return function () use ($generator) {
+                    return $generator->longitude;
+                };        
+                
+                
             case 'firstname':
                 return function () use ($generator) {
                     return $generator->firstName;
