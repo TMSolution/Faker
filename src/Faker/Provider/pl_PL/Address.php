@@ -207,4 +207,17 @@ class Address extends \Faker\Provider\Address
     {
         return static::randomElement(static::$state);
     }
+    
+    public static function latitude()
+    {
+        return number_format(mt_rand(22000000, 25000000)/1000000, 6);
+    }
+
+    public static function longitude()
+    {
+        return number_format(mt_rand(120000000, 122000000)/1000000, 6);
+    }
+    
+    
+    
 }
