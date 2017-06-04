@@ -208,12 +208,12 @@ class Address extends \Faker\Provider\Address
         return static::randomElement(static::$state);
     }
     
-    public static function latitude()
+    public static function latitude($min = -90, $max = 90)
     {
         return number_format(mt_rand(22000000, 25000000)/1000000, 6);
     }
 
-    public static function longitude()
+    public static function longitude($min = -90, $max = 90)
     {
         return number_format(mt_rand(120000000, 122000000)/1000000, 6);
     }
